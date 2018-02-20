@@ -1,0 +1,35 @@
+.jumbotron {
+    background: #FF8C00;
+    color: white;
+}
+
+
+#instructions {
+    background: #FFDAB9;
+    color: green;
+}
+
+#random-number {
+    background: green;
+    color: purple;
+}
+
+#scoreboard {
+    background: aqua;
+    color: black;
+}
+
+#teal {
+    background: teal;
+    color: white;
+
+}
+
+.row{    
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+#your-score{
+    height: 150px;
+}
