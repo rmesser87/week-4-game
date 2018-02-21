@@ -4,36 +4,43 @@ $(document).ready(function () {
     var losses = 0;
     var lockgame = false;
 
+
     var bluevalue = Math.floor((Math.random() * 12) + 1);
     var orangevalue = Math.floor((Math.random() * 12) + 1);
     var pinkvalue = Math.floor((Math.random() * 12) + 1);
     var purplevalue = Math.floor((Math.random() * 12) + 1);
     var yourscore = 0;
     var randomnumber = Math.floor((Math.random() * 120) + 19);
-    
 
-
+    function clear() {
+        var bluevalue = 0;
+        var orangevalue = 0;
+        var pinkvalue = 0;
+        var purplevalue = 0;
+        var yourscore = 0;
+        var randomnumber = 0;
+    };
 
     $("#random-number").html(randomnumber);
     console.log(randomnumber)
-
 
     $("#blue").on("click", function () {
         $("#your-score").html(bluevalue);
         yourscore = yourscore + bluevalue;
         $("#your-total-score").html("Your total score is: " + yourscore);
         if (yourscore === randomnumber) {
-            wins ++;
-            $("#wins").text("Wins:"+ wins);
+            wins++;
+            $("#wins").text("Wins:" + wins);
             alert("You Win!");
             lockgame = true;
+            clear()
         }
         else if (yourscore > randomnumber) {
-            losses ++;
-            $("#losses").text("Losses:"+ losses);
+            losses++;
+            $("#losses").text("Losses:" + losses);
             alert("You Lose!");
             lockgame = true;
-
+            clear()
         }
     });
 
@@ -42,16 +49,18 @@ $(document).ready(function () {
         yourscore = yourscore + orangevalue;
         $("#your-total-score").html("Your total score is: " + yourscore);
         if (yourscore === randomnumber) {
-            wins ++;
-            $("#wins").text("Wins:"+ wins);
+            wins++;
+            $("#wins").text("Wins:" + wins);
             alert("You Win!")
             lockgame = true;
+            clear()
         }
         else if (yourscore > randomnumber) {
-            losses ++;
-            $("#losses").text("Losses:"+ losses);
+            losses++;
+            $("#losses").text("Losses:" + losses);
             alert("You Lose!");
             lockgame = true;
+            clear()
         }
     });
 
@@ -60,14 +69,15 @@ $(document).ready(function () {
         yourscore = yourscore + pinkvalue;
         $("#your-total-score").html("Your total score is: " + yourscore);
         if (yourscore === randomnumber) {
-            wins ++;
-            $("#wins").text("Wins:"+ wins);
+            wins++;
+            $("#wins").text("Wins:" + wins);
             alert("You Win!")
             lockgame = true;
+            clear()
         }
         else if (yourscore > randomnumber) {
-            losses ++;
-            $("#losses").text("Losses:"+ losses);
+            losses++;
+            $("#losses").text("Losses:" + losses);
             alert("You Lose!");
             lockgame = true;
         }
@@ -78,18 +88,22 @@ $(document).ready(function () {
         yourscore = yourscore + purplevalue;
         $("#your-total-score").html("Your total score is: " + yourscore);
         if (yourscore === randomnumber) {
-            wins ++;
-            $("#wins").text("Wins:"+ wins);
+            wins++;
+            $("#wins").text("Wins:" + wins);
             alert("You Win!")
             lockgame = true;
+            clear()
         }
         else if (yourscore > randomnumber) {
-            losses ++;
-            $("#losses").text("Losses:"+ losses);
+            losses++;
+            $("#losses").text("Losses:" + losses);
             alert("You Lose!");
             lockgame = true;
+            clear()
         }
     });
+    // console.log("Game Finished")
+    clear()
 
 
 
